@@ -127,7 +127,7 @@ $(function(e) {
     }
 	
     // ADMINISTRATOR 클릭시 인트라메인으로
-    $('#logo a').attr('href',g5_user_admin_url).text('iCMMS').css({'font-size':'1.4em;'});
+    $('#logo a').attr('href',g5_user_admin_url).text('EPCS ADMIN').css({'font-size':'1.4em;'});
     // $('#logo a img').attr('src',g5_user_admin_url+'/img/logo.png').css({'width:'});
 
     // if localhost, favicon input
