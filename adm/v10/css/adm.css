@@ -90,10 +90,12 @@ input[type="checkbox"]:checked:after{font-family:FontAwesome;position:absolute;c
 #gnb .on .btn_op.menu-910{    background:url(../img/menu-950.png) 50% 24% no-repeat #162c52}
 #gnb .gnb_li .btn_op.menu-915{background:url(../img/menu-960-1.png) 50% 24% no-repeat #0f1e3b }
 #gnb .on .btn_op.menu-915{    background:url(../img/menu-960.png) 50% 24% no-repeat #162c52}
+#gnb .gnb_li .btn_op.menu-917{background:url(../img/menu-960-1.png) 50% 24% no-repeat #0f1e3b }
+#gnb .on .btn_op.menu-917{    background:url(../img/menu-960.png) 50% 24% no-repeat #162c52}
+#gnb .gnb_li .btn_op.menu-919{background:url(../img/menu-950-1.png) 50% 24% no-repeat #0f1e3b }
+#gnb .on .btn_op.menu-919{    background:url(../img/menu-950.png) 50% 24% no-repeat #162c52}
 #gnb .gnb_li .btn_op.menu-920{background:url(../img/menu-950-1.png) 50% 24% no-repeat #0f1e3b }
 #gnb .on .btn_op.menu-920{    background:url(../img/menu-950.png) 50% 24% no-repeat #162c52}
-#gnb .gnb_li .btn_op.menu-925{background:url(../img/menu-960-1.png) 50% 24% no-repeat #0f1e3b }
-#gnb .on .btn_op.menu-925{    background:url(../img/menu-960.png) 50% 24% no-repeat #162c52}
 #gnb .gnb_li .btn_op.menu-930{background:url(../img/menu-950-1.png) 50% 24% no-repeat #0f1e3b }
 #gnb .on .btn_op.menu-930{    background:url(../img/menu-950.png) 50% 24% no-repeat #162c52}
 #gnb .gnb_li .btn_op.menu-935{background:url(../img/menu-960-1.png) 50% 24% no-repeat #0f1e3b }
@@ -102,8 +104,6 @@ input[type="checkbox"]:checked:after{font-family:FontAwesome;position:absolute;c
 #gnb .on .btn_op.menu-940{    background:url(../img/menu-950.png) 50% 24% no-repeat #162c52}
 #gnb .gnb_li .btn_op.menu-945{background:url(../img/menu-960-1.png) 50% 24% no-repeat #0f1e3b }
 #gnb .on .btn_op.menu-945{    background:url(../img/menu-960.png) 50% 24% no-repeat #162c52}
-#gnb .gnb_li .btn_op.menu-950{background:url(../img/menu-950-1.png) 50% 24% no-repeat #0f1e3b }
-#gnb .on .btn_op.menu-950{    background:url(../img/menu-950.png) 50% 24% no-repeat #162c52}
 #gnb .gnb_li .btn_op.menu-955{background:url(../img/menu-960-1.png) 50% 24% no-repeat #0f1e3b }
 #gnb .on .btn_op.menu-955{    background:url(../img/menu-960.png) 50% 24% no-repeat #162c52}
 #gnb .gnb_li .btn_op.menu-960{background:url(../img/menu-950-1.png) 50% 24% no-repeat #0f1e3b }
@@ -211,8 +211,8 @@ a.btn_cancel{background:#43535C;border:1px solid #434343;}
 }
 .tbl_head01 tr:nth-child(even) td{background:#071127;}
 
-.tbl_frm01 th{background:#121923;border-top:1px solid #222;border-bottom:1px solid #222;}
-.tbl_frm01 td{background:#060d1b;border-top: 1px solid #1d252f;border-bottom: 1px solid #1d252f;color:#bbb;}
+.tbl_frm01 th{background:#121923;border-top:1px solid #222;border-bottom:1px solid #222;width:220px;}
+.tbl_frm01 td{background:#060d1b;border-top:1px solid #1d252f;border-bottom: 1px solid #1d252f;color:#bbb;}
 td.td_grpset{border-left:1px solid #4b5465;}
 .frm_info{color:#999;}
 .frm_input {border: 1px solid #1e2531;}

@@ -114,7 +114,7 @@ $(function(e) {
     // 메뉴에 포커스 제거
     $('#gnb .gnb_li .btn_op').css('outline','none');
     // 관리자 대메뉴의 타이틀을 span으로 감싸기
-    $('#gnb .gnb_li .btn_op').each(function(){ $(this).html('<span>'+$(this).attr('title')+'</span>'); });
+    $('#gnb .gnb_li .btn_op').each(function(){ $(this).html('<span>'+$(this).attr('ttl')+'</span>'); });
     // 오른편 상단 접속자 이름 표시
     $('.tnb_mb_btn').html(mb_name+'<span class="<?php echo G5_ADMIN_URL?>/img/op_btn.png">메뉴열기</span>').show();
     

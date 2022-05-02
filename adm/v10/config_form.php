@@ -507,6 +507,19 @@ yearly,1,10 = 연도별,1년단위,10년치,sum(합계)'); ?>
 				<?php echo help('stock=재고,repairing=수리중,repairstock=수리완료재고,scrap=폐기,pendign=불출대기,used=사용완료,trash=삭제'); ?>
 				<input type="text" name="set_mtr_status" value="<?php echo $g5['setting']['set_mtr_status']; ?>" class="frm_input" style="width:70%;">
 			</td>
+		</tr><tr>
+			<th scope="row">자재상태중 양품상태</th>
+			<td colspan="3">
+				<?php echo help('영문상태값만 쉽표로 구분해서 입력하세요. 예) finish'); ?>
+				<input type="text" name="set_mtr_status_ok" value="<?php echo $g5['setting']['set_mtr_status_ok']; ?>" class="frm_input" style="width:70%;">
+			</td>
+		</tr>
+		<tr>
+			<th scope="row">자재상태중 불량품상태</th>
+			<td colspan="3">
+				<?php echo help('영문상태값만 쉽표로 구분해서 입력하세요. 예) error_inhomogeneity,error_foreign,error_etc'); ?>
+				<input type="text" name="set_mtr_status_ng" value="<?php echo $g5['setting']['set_mtr_status_ng']; ?>" class="frm_input" style="width:70%;">
+			</td>
 		</tr>
 		<tr>
 			<th scope="row">자재불량타입</th>

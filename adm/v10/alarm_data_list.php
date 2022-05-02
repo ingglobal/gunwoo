@@ -1,5 +1,5 @@
 <?php
-$sub_menu = "950100";
+$sub_menu = "919100";
 include_once('./_common.php');
 
 auth_check($auth[$sub_menu],"r");
@@ -315,7 +315,7 @@ function sch_submit(f){
         echo '</tr>'.PHP_EOL;
 	}
 	if ($i == 0)
-		echo '<tr><td colspan="5" class="empty_table">자료가 없습니다.</td></tr>';
+		echo '<tr><td colspan="6" class="empty_table">자료가 없습니다.</td></tr>';
 	?>
 	</tbody>
 	</table>
