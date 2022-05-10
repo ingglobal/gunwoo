@@ -15,9 +15,9 @@ if (false) { //(!$member['mb_manager_yn']) {
     $where[] = " mb_id_saler = '".$member['mb_id']."' ";
 }
 
-$sql_common = " FROM {$g5['company_table']} AS com 
+$sql_common = " FROM {$g5['company_table']} AS com
                 LEFT JOIN {$g5['company_saler_table']} AS cms ON cms.com_idx = com.com_idx
-"; 
+";
 
 if ($sch_word) {
     switch ($sch_field) {
@@ -35,7 +35,7 @@ if ($sch_word) {
             break;
     }
 }
-else 
+else
     $sch_field = 'com_name';
 
 // 최종 WHERE 생성
@@ -57,11 +57,11 @@ $sql = " SELECT SQL_CALC_FOUND_ROWS com.*
 		{$sql_search}
         GROUP BY com.com_idx
         {$sql_order}
-		LIMIT {$from_record}, {$rows} 
+		LIMIT {$from_record}, {$rows}
 ";
-//echo $sql;
+// echo $sql;
 $result = sql_query($sql,1);
-$count = sql_fetch_array( sql_query(" SELECT FOUND_ROWS() as total ") ); 
+$count = sql_fetch_array( sql_query(" SELECT FOUND_ROWS() as total ") );
 $total_count = $count['total'];
 $total_page  = ceil($total_count / $rows);  // 전체 페이지 계산
 
@@ -99,7 +99,7 @@ $qstr1 = 'frm='.$frm.'&d='.$d.'&sch_field='.$sch_field.'&sch_word='.urlencode($s
         <input type="submit" value="검색" class="btn btn_01">
         <a href="<?php echo $_SERVER['SCRIPT_NAME']?>?frm=<?php echo $_REQUEST['frm']?>&d=<?php echo $_REQUEST['d']?>" class="btn btn_b10">검색취소</a>
     </div>
-    
+
     <div class="tbl_head01 tbl_wrap new_win_con">
         <table>
         <caption>검색결과</caption>
@@ -118,7 +118,7 @@ $qstr1 = 'frm='.$frm.'&d='.$d.'&sch_field='.$sch_field.'&sch_word='.urlencode($s
 
             // 대표전화
             $row['com_tel'] = substr($row['com_tel'],0,3).'****'.substr($row['com_tel'],-4);
-            
+
             // 회원정보 추출
             $mb1 = get_table_meta('member','mb_id',$row['mb_id']);
             //print_r2($mb1);

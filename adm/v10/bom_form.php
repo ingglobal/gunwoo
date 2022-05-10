@@ -12,26 +12,6 @@ $pre = substr($fields[0],0,strpos($fields[0],'_'));
 $fname = preg_replace("/_form/","",$g5['file_name']); // _form을 제외한 파일명
 $qstr .= '&sca='.$sca.'&ser_bom_type='.$ser_bom_type; // 추가로 확장해서 넘겨야 할 변수들
 
-// 분류선택 박스(리스트 내부 사용)
-/*
-$sql = " SELECT *
-            FROM {$g5['bom_category_table']}
-            WHERE com_idx = '".$_SESSION['ss_com_idx']."'
-            ORDER BY bct_id, bct_order
-";
-$result = sql_query($sql,1);
-
-//카테고리 선택목록
-for ($i=0; $row=sql_fetch_array($result); $i++) {
-    $cat_tree = category_tree_array($row['bct_id']);
-    $cat_name = '';
-    for($i=0;$i<count($cat_tree);$i++){
-        $cat_str = sql_fetch(" SELECT bct_name FROM {$g5['bom_category_table']} WHERE bct_id = '{$cat_tree[$i]}' ");
-        $cat_name .= ($i == 0) ? $cat_str['bct_name'] : ' > '.$cat_str['bct_name'];
-    }
-    $category_select .= '<option value="'.$row['bct_id'].'">'.$cat_name.'</option>'.PHP_EOL;
-}
-*/
 
 if ($w == '') {
     $sound_only = '<strong class="sound_only">필수</strong>';
@@ -170,20 +150,7 @@ input[type="file"]::after{display:block;content:'파일선택\A(드래그앤드�
                 <?=$g5['set_bom_type_options']?>
             </select>
             <script>
-                <?php if(preg_match('/korsuji/i',$config['cf_title']) || preg_match('/한국수지/',$config['cf_title']) || preg_match('/korea\ssuji/i',$config['cf_title'])){ ?>
-                    <?php if($w == ''){ ?>
-                        $('#bom_type').find('option').each(function(){
-                            if($(this).attr('value') != '' && $(this).attr('value') != 'product') {
-                                $(this).remove();
-                            }
-                        });
-                        $('#bom_type').val('product');
-                    <?php } else { ?>
-                        $('select[name="<?=$pre?>_type"]').val('<?=${$pre}[$pre.'_type']?>');
-                    <?php } ?>
-                <?php } else { ?>
-                    $('select[name="<?=$pre?>_type"]').val('<?=${$pre}[$pre.'_type']?>');
-                <?php } ?>
+                $('select[name="<?=$pre?>_type"]').val('<?=${$pre}[$pre.'_type']?>');
             </script>
 		</td>
     </tr>
@@ -232,16 +199,10 @@ input[type="file"]::after{display:block;content:'파일선택\A(드래그앤드�
         echo create_td_input($ar);
         unset($ar);
         ?>
-        <?php if(${$pre}['bom_type'] == 'product'){ ?>
-        <th scope="row">메인생산설비라인</th>
+        <th scope="row">규격</th>
 		<td>
-            <select name="trm_idx_line" id="trm_idx_line">
-                <option value="">라인선택</option>
-                <?=$line_form_options?>
-            </select>
-            <script>$('select[name="trm_idx_line').val('<?=$bom['trm_idx_line']?>');</script>
+            <input type="text" name="bom_standard" value="<?php echo ${$pre}['bom_standard'] ?>" id="bom_standard" class="frm_input" style="width:300px;">
 		</td>
-        <?php } ?>
     </tr>
     <tr>
         <th scope="row">가격정보</th>

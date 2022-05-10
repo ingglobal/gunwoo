@@ -239,7 +239,7 @@ $('.date_blank').on('click',function(e){
                                         <span class="span_bom_name">'.$bom_mod.'('.$row1['ori_idx'].')</span>
                                         <span class="span_bom_part_no">'.$row1['bom_part_no'].'</span>
                                         <span class="span_bom_price"><b>'.number_format($row1['bom_price']).'</b>원</span>
-                                        <span class="span_ori_count"><b><span class="'.$cnt_blick.'">&nbsp;'.number_format($row1['ori_count']).'</span></b> kg</span>
+                                        <span class="span_ori_count"><b><span class="'.$cnt_blick.'">&nbsp;'.number_format($row1['ori_count']).'</span></b> 개</span>
                                     </div>';
         }
 		

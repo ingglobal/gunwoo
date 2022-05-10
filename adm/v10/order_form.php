@@ -154,7 +154,7 @@ add_stylesheet('<link rel="stylesheet" href="'.G5_USER_ADMIN_CSS_URL.'/nestable.
                     <div class="add_items">
                         <span class="bom_part_no">'.$row['bom_part_no'].'</span>
                         <span class="bom_price" price="'.$row['ori_price'].'"><b>'.number_format($row['ori_price']).'</b>원</span>
-                        <span class="span_count"><span class="bit_count'.$cnt_blick.'">'.$row['ori_count'].'</span>kg</span>
+                        <span class="span_count"><span class="bit_count'.$cnt_blick.'">'.$row['ori_count'].'</span>개</span>
                         <img src="https://icongr.am/clarity/times.svg?size=30&color=444444" class="btn_remove" title="삭제">
                     </div>
                 </div>
@@ -416,7 +416,7 @@ $(document).on('click','#del-item',function(e){
 // 항목추가 함수
 function add_item(bom_idx, bom_name, bom_part_no, com_name, bom_price, bom_price2) {
     if($('#nestable3 li .dd3-content .add_items .bom_part_no:contains('+bom_part_no+')').length > 0){
-        alert('같은 상품을 올릴수 없습니다. 올라간 상품의 무게(kg)로 조정하세요.');
+        alert('같은 상품을 올릴수 없습니다. 올라간 상품의 개수(개)로 조정하세요.');
         return;
     }
 
@@ -425,7 +425,7 @@ function add_item(bom_idx, bom_name, bom_part_no, com_name, bom_price, bom_price
                 +'  <div class="add_items">'
                 +'      <span class="bom_part_no">'+bom_part_no+'</span>'
                 +'      <span class="bom_price" price="'+bom_price2+'">'+bom_price+'원</span>'
-                +'      <span class="span_count"><span class="bit_count">1</span>kg</span>'
+                +'      <span class="span_count"><span class="bit_count">1</span>개</span>'
                 +'      <img src="https://icongr.am/clarity/times.svg?size=30&color=444444" class="btn_remove" title="삭제">'
                 +'  </div>'
                 +'</div>';

@@ -263,7 +263,7 @@ $qstr .= '&sca='.$sca.'&ser_bom_type='.$ser_bom_type; // 추가로 확장해서 
         -->
         <td class="td_bom_type"><?=$g5['set_bom_type_value'][$row['bom_type']]?></td><!-- 타입 -->
         <td class="td_mng">
-            <?php ;//($row['bom_type']!='material')?$s_bom:''; ?><!-- 자재가 아닌 경우만 BOM 버튼 -->
+            <?=(($row['bom_type']!='material')?$s_bom:'')?><!-- 자재가 아닌 경우만 BOM 버튼 -->
 			<?=$s_mod?>
 		</td>
     </tr>

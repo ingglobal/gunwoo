@@ -255,8 +255,8 @@ $('.data_blank').on('click',function(e){
         </th>
         <th scope="col">번호</th>
         <th scope="col">제품(수주상품번호)</th>
-        <th scope="col">D<br>수주무게(kg)</th>
-        <th scope="col">출하계획<br>무게(kg)</th>
+        <th scope="col">D<br>수주갯수</th>
+        <th scope="col">출하계획<br>갯수</th>
         <th scope="col">주간<br>09:00</th>
         <th scope="col">주간<br>12:00</th>
         <th scope="col">주간<br>15:00</th>
