@@ -133,20 +133,14 @@ echo $g5['container_sub_title'];
 </select-->
 <select name="trm_idx_location" id="trm_idx_location">
     <option value="">::라인선택::</option>
-    <option value="1">1라인</option>
-    <option value="2">2라인</option>
+    <?=$line_form_options?>
 </select>
 <select name="itm2_status" id="itm2_status">
     <option value="">::상태선택::</option>
     <?=$g5['set_itm_status_value_options']?>
 </select>
-<select name="itm_delivery" id="itm_delivery">
-    <option value="">::출하여부::</option>
-    <option value="1">출하상태</option>
-    <option value="0">재고상태</option>
-</select>
 <?php
-$itm_static_date = ($itm_static_date) ? $itm_static_date : G5_TIME_YMD;
+// $itm_static_date = ($itm_static_date) ? $itm_static_date : G5_TIME_YMD;
 ?>
 <label for="itm_static_date"><strong class="sound_only">입고일 필수</strong>
 <i class="fa fa-times" aria-hidden="true"></i>
@@ -156,9 +150,12 @@ $itm_static_date = ($itm_static_date) ? $itm_static_date : G5_TIME_YMD;
 <?php
 $sfl = ($sfl == '') ? 'itm_name' : $sfl;
 ?>
-$('#sfl').val('<?=$sfl?>');
-$('#shift').val('<?=$shift?>');
-$('#itm2_status').val('<?=$itm2_status?>');
+<?php if($trm_idx_location){ ?>
+    $('#trm_idx_location').val('<?=$trm_idx_location?>');
+<?php } ?>
+<?php if($itm2_status){ ?>
+    $('#itm2_status').val('<?=$itm2_status?>');
+<?php } ?>
 </script>
 <input type="submit" class="btn_submit" value="검색">
 
