@@ -148,7 +148,10 @@ sql_query($adsql);
 
 if(count($set_values)){   
     foreach ($set_values as $set_value) {
-        list($key, $value) = explode('=', trim($set_value));
+        // list($key, $value) = explode('=', trim($set_value));
+        $auth_arr = explode('=', trim($set_value));
+        $key = $auth_arr[0];
+        $value = $auth_arr[1];
         if($key&&$value) {           
             $sql = "INSERT INTO {$g5['auth_table']} SET
                         mb_id = '".$mb_id."'
